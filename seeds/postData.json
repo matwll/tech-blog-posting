@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Cool Tech",
+        "content": "There are many cool techs out there",
+        "user_name": "One Guy"
+    },
+    {
+        "title": "Theres Always more",
+        "content": "You can always find new technologies coming out",
+        "user_name": "Five GUy"
+    },
+    {
+        "title": "One Time",
+        "content": "at band camp",
+        "user_name": "Three Guy"
+    },
+    {
+        "title": "New Tech",
+        "content": "Want to find new tech?",
+        "user_name": "One Guy"
+    },
+    {
+        "title": "Learn Learn Learn",
+        "content": "There is so much to learn. Always more.",
+        "user_name": "Four Guy"
+    }
+]
