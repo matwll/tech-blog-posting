@@ -33,7 +33,7 @@ router.put("/update", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { user_name: req.body.user_name } });
+    const userData = await User.findOne({ where: { user_name: req.body.userName } });
 
     if (!userData) {
       res.status(400).json({
