@@ -1,0 +1,35 @@
+header, .post:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .no-button:hover {
+    color: #140438;
+    text-decoration: underline;
+  }
+  
+  
+  body{
+    background-color: rgb(179, 182, 185);
+  }
+  .banner {
+    background-color: #551a03;
+    background-size: cover
+  }
+  header{
+    min-height: 200px;
+  }
+
+  h1, h2, h3, h4, h5, h6{
+  
+       font-family: Arial, Helvetica, sans-serif;
+  }

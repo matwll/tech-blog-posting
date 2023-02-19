@@ -18,7 +18,7 @@ Comment.init(
       type: DataTypes.STRING,
       references: {
         model: 'user',
-        key: 'user_name',
+        key: 'id',
       },
     },
     date_created: {
