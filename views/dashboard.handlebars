@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{user_name}}!</h2>
   </div>
 </div>
 
@@ -24,20 +24,28 @@
   </div>
 
   {{#if posts.length}}
-  <div class="col-md-6 post-list">
-    <h3>Current posts:</h3>
+    <div class="col-md-6">
+      <h3>Current posts:</h3>
 
-    {{#each posts as |post|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-      </div>
+      {{#each posts as |post|}}
+        <div class="row mb-4 post">
+          <div class="col-md-5">
+            <h2>
+              <a href="/{{post.id}}">{{post.title}}</a>
+            </h2>
+            <p>Created by
+              {{post.user_name}}
+              on
+              {{format_date post.date_created}}</p>
+          </div>
+          <div class="col-md-7">
+            <p>
+              {{post.content}}
+            </p>
+          </div>
+        </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
   {{/if}}
 </div>
 
