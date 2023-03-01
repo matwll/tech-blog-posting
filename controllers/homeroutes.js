@@ -51,8 +51,10 @@ router.get('/dashboard', withAuth, async (req, res) => {
       include: [{ model: Post }],
     });
 
-    const user = userData.get({ plain: true });
+//need to figure out why post is not being included in the userData
 
+    const user = userData.get({ plain: true });
+    
     res.render('dashboard', {
       ...user,
       logged_in: true
