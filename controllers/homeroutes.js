@@ -49,17 +49,18 @@ router.get('/dashboard', withAuth, async (req, res) => {
     const postData = await Post.findAll({
       where: {
         user_name: req.session.user_name
-      }
+      },
+      raw:true
     });
+    //console.log(postData);
+//need to figure out why post is including unidentified elements
 
-//need to figure out why post is not being included in the userData
-
-    const user = postData.map((data) => {
-      data.get({ plain: true })
+    const posts = postData.map((post) => {
+      return post;
     });
-    console.log(user);
+    console.log(posts,"NOT WORKING");
     res.render('dashboard', {
-      ...user,
+      posts,
       logged_in: true
     });
   } catch (err) {
