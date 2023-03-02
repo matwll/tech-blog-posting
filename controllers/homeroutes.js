@@ -46,15 +46,18 @@ router.get('/post/:id', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Post }],
+    const postData = await Post.findAll({
+      where: {
+        user_name: req.session.user_name
+      }
     });
 
 //need to figure out why post is not being included in the userData
 
-    const user = userData.get({ plain: true });
-    
+    const user = postData.map((data) => {
+      data.get({ plain: true })
+    });
+    console.log(user);
     res.render('dashboard', {
       ...user,
       logged_in: true
