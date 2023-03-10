@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const newCommentFormHandler = async (event) => {
   event.preventDefault();
 
   const content = document.querySelector("#content").value.trim();
@@ -13,14 +13,14 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to create comment");
     }
   }
 };
 
-const delButtonHandler = async (event) => {
+const delCommentButtonHandler = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
@@ -29,7 +29,7 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to delete comment");
     }
@@ -38,6 +38,8 @@ const delButtonHandler = async (event) => {
 
 document
   .querySelector(".new-comment-form")
-  .addEventListener("submit", newFormHandler);
+  .addEventListener("submit", newCommentFormHandler);
 
-document.querySelector(".comment").addEventListener("click", delButtonHandler);
+document
+  .querySelector(".comment")
+  .addEventListener("click", delCommentButtonHandler);
