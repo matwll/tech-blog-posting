@@ -33,3 +33,7 @@ header, .post:not(:last-child) {
   
        font-family: Arial, Helvetica, sans-serif;
   }
+
+  #hidden {
+    opacity: 0;
+  }
