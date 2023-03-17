@@ -3,10 +3,12 @@ const { Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, async (req, res) => {
+  console.log(req.body);
   try {
     const commentData = await Comment.create({
-      ...req.body,
+      content: req.body.content,
       user_name: req.session.user_name,
+      post_id: req.body.postId,
     });
     res.status(200).json(commentData);
   } catch (err) {
