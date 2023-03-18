@@ -44,7 +44,7 @@ N/A
 
 ## Usage
 
-Open the website <here>. You start on the main page and can see other user's blog posts. If you wish to comment or create your own posts sign up and then you can do so. If you click on a post it will take you to a sceen where you can view comments on that post.
+Open the website <https://tranquil-lake-34028.herokuapp.com/>. You start on the main page and can see other user's blog posts. If you wish to comment or create your own posts sign up and then you can do so. If you click on a post it will take you to a sceen where you can view comments on that post.
 
 <!-- CONTRIBUTORING -->
 
