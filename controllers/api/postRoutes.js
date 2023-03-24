@@ -31,6 +31,7 @@ router.post("/", withAuth, async (req, res) => {
     const postData = await Post.create({
       ...req.body,
       user_id: req.session.user_id,
+      user_name: req.session.user_name,
     });
     res.status(200).json(postData);
   } catch (err) {
