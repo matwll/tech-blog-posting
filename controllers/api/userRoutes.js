@@ -38,7 +38,7 @@ router.post("/login", async (req, res) => {
 
     if (!userData) {
       res.status(400).json({
-        message: "please check your email and password and try again.",
+        message: "please check your username or password and try again.",
       });
       return;
     }
